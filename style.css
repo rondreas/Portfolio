@@ -118,7 +118,7 @@ p {
 }
 
 @media (orientation: portrait) {
-  .site-branding {
+  .site-branding-text {
     align-items: center;
   }
 }
@@ -178,6 +178,7 @@ p {
 .splash-nav .menu-item {
   min-height: 74vh;
   flex: 1 1 auto;
+  margin: 0px;
 }
 
 .background {
