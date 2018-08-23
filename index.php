@@ -2,12 +2,13 @@
 
 <div class="wrap">
 
-<?php
-  wp_nav_menu( array(
-    'menu_class' => 'splash-nav',
-    'walker' => new Custom_Walker()
-  ) );
-?>
+<? if ( has_nav_menu( 'front' ) ) : ?>
+  <?php wp_nav_menu( array(
+      'theme_location' => 'front',
+      'menu_class' => 'splash-nav',
+      'walker' => new Custom_Walker()
+  ) ); ?>
+<?php endif; ?>
 
 </div><!-- .wrap -->
 

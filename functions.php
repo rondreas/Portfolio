@@ -1,4 +1,15 @@
 <?php
+
+function portfolio_setup() {
+  register_nav_menus( array(
+    'top' => __('Top Menu', 'portfolio'),
+    'front' => __('Front Page Menu', 'portfolio'),
+    'social' => __('Social Links Menu', 'portfolio'),
+  ));
+}
+
+add_action('after_setup_theme', 'portfolio_setup');
+
 class Custom_Walker extends Walker_Nav_Menu {
   /**
    * Custom walker adapted from https://www.ibenic.com/how-to-create-wordpress-custom-menu-walker-nav-menu-class/
@@ -40,4 +51,5 @@ class Custom_Walker extends Walker_Nav_Menu {
     $output .= '</div><!-- .background -->';
   }
 }
+
 ?>

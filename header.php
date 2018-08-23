@@ -33,10 +33,15 @@
 
       </div><!-- site-branding-text -->
       
-      <div class="nav-bar">
-<?php
-          wp_nav_menu();
-?>
+      <?php if ( has_nav_menu( 'top' ) ) : ?>
+        <div class="navigation-top">
+          <?php wp_nav_menu( array(
+            'theme_location' => 'top',
+            'menu_id' => 'top-menu',
+          ) ); ?>
+        </div>
+      <?php endif; ?>
+
       </div>
 
     </header><!-- site-header -->
