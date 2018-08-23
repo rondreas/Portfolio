@@ -114,9 +114,6 @@ p {
 
 .site-branding-text a {
   text-decoration: none;
-}
-
-.site-branding-text a:visited {
   color: aliceblue;
 }
 
@@ -126,19 +123,19 @@ p {
   }
 }
 
-.nav-bar {
+.navigation-top {
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 
-.nav-bar a{
+.navigation-top a{
   text-decoration: none;
   font-size: 2.55vmin;
   color: skyblue;
 }
 
-.nav-bar a:hover, .nav-bar a:active {
+.navigation-top a:hover, .nav-bar a:active {
   color: aliceblue;
 }
 
