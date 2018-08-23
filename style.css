@@ -140,7 +140,7 @@ p {
 }
 
 /* Front page specific */
-#menu-front {
+#front-menu {
   width: 100%;
   display: flex;
   color: aliceblue;
@@ -148,18 +148,18 @@ p {
 }
 
 @media (orientation: landscape) {
-  #menu-front {
+  #front-menu {
     flex-direction: row;
   }
 }
 
 @media (orientation: portrait) {
-  #menu-front {
+  #front-menu {
     flex-direction: column;
   }
 }
 
-#menu-front h1 {
+#front-menu h1 {
   font-size: 5vmin;
   text-shadow: 0.2vmin 0.2vmin 0.4vmin rgba(0, 0, 0, 0.75);
   position: absolute;
@@ -168,14 +168,14 @@ p {
 }
 
 /* Add fancy line above title */
-#menu-front h1::before {
+#front-menu h1::before {
   content: "_____";
   display: block;
   letter-spacing: -0.2vmin;
 }
 
 /* Used to be called .container, altered to fit wp */
-#menu-front .menu-item {
+#front-menu .menu-item {
   min-height: 74vh;
   flex: 1 1 auto;
   margin: 0px;
@@ -188,7 +188,7 @@ p {
   background-size: cover;
 }
 
-#menu-front a, span {
+#front-menu a, span {
   display: block;
   height: 100%;
   width: 100%;
