@@ -45,7 +45,7 @@ body {
   flex-direction: column; 
 }
 
-ul {
+.menu {
   margin: 0px;
   padding: 0px;
   list-style-type: none;
@@ -54,13 +54,13 @@ ul {
 }
 
 @media (orientation: landscape) {
-  li {
+  #top-menu .menu-item {
     margin: 1.5em;
   }
 }
 
 @media (orientation: portrait) {
-  li {
+  #top-menu .menu-item{
     margin: auto;
   }
 }
@@ -140,7 +140,7 @@ p {
 }
 
 /* Front page specific */
-.splash-nav {
+#menu-front {
   width: 100%;
   display: flex;
   color: aliceblue;
@@ -148,18 +148,18 @@ p {
 }
 
 @media (orientation: landscape) {
-  .splash-nav {
+  #menu-front {
     flex-direction: row;
   }
 }
 
 @media (orientation: portrait) {
-  .splash-nav {
+  #menu-front {
     flex-direction: column;
   }
 }
 
-.splash-nav h1 {
+#menu-front h1 {
   font-size: 5vmin;
   text-shadow: 0.2vmin 0.2vmin 0.4vmin rgba(0, 0, 0, 0.75);
   position: absolute;
@@ -168,14 +168,14 @@ p {
 }
 
 /* Add fancy line above title */
-.splash-nav h1::before {
+#menu-front h1::before {
   content: "_____";
   display: block;
   letter-spacing: -0.2vmin;
 }
 
 /* Used to be called .container, altered to fit wp */
-.splash-nav .menu-item {
+#menu-front .menu-item {
   min-height: 74vh;
   flex: 1 1 auto;
   margin: 0px;
@@ -188,7 +188,7 @@ p {
   background-size: cover;
 }
 
-.splash-nav a, span {
+#menu-front a, span {
   display: block;
   height: 100%;
   width: 100%;
