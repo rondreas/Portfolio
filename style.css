@@ -132,6 +132,7 @@ p {
 
 .navigation-top a{
   text-decoration: none;
+  font-weight: bold;
   font-size: 2.55vmin;
   color: skyblue;
 }
