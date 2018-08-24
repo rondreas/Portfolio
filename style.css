@@ -50,6 +50,7 @@ body {
   list-style-type: none;
   color: skyblue;
   display: flex;
+  text-transform: uppercase;
 }
 
 @media (orientation: landscape) {
@@ -109,6 +110,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-transform: uppercase;
 }
 
 .site-branding-text a {
@@ -170,7 +172,7 @@ p {
 #front-menu h1::before {
   content: "_____";
   display: block;
-  letter-spacing: -0.2vmin;
+  letter-spacing: -0.1em;
 }
 
 /* Used to be called .container, altered to fit wp */
