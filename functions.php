@@ -10,6 +10,8 @@ function portfolio_setup() {
 
 add_action('after_setup_theme', 'portfolio_setup');
 
+require get_parent_theme_file_path('inc/icon-functions.php');
+
 class Custom_Walker extends Walker_Nav_Menu {
   /**
    * Custom walker adapted from https://www.ibenic.com/how-to-create-wordpress-custom-menu-walker-nav-menu-class/

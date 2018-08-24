@@ -199,7 +199,7 @@ p {
 }
 
 /* Footer */
-.footer {
+.site-footer {
   height: 12vh;
   color: skyblue;
   display: flex;
@@ -212,7 +212,22 @@ p {
   justify-content: center;
 }
 
-.footer p {
+.site-footer p {
   font-size: 2vmin;
 }
 
+/* Fix to solve the size for out icons */
+.social-navigation ul,
+.social-navigation li,
+.social-navigation a {
+  height: 100%;
+}
+
+social-navigation a {
+  display: block;
+}
+
+.icon {
+  height: 5vmin;
+  fill: aliceblue;
+}
