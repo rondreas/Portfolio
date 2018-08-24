@@ -231,3 +231,29 @@ social-navigation a {
   height: 5vmin;
   fill: aliceblue;
 }
+
+/* Under Construction Style */
+.under-construction {
+  height: 74vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: DarkSlateGray;
+  color: floralwhite;
+  text-align: center;
+}
+
+.under-construction div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.under-construction h1 {
+  font-size: 15vmin;
+  text-transform: uppercase;
+}
+
+.under-construction p {
+  font-size: 6vmin;
+}
