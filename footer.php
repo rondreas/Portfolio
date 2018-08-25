@@ -2,6 +2,8 @@
 
     <footer id="colophon" class="site-footer">
 
+      <div class="footer-content">
+
       <?php 
       if ( has_nav_menu( 'social' ) ) : ?>
         <nav class="social-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Social Links Menu' ); ?>">
@@ -19,6 +21,8 @@
 
       <div class="contact-wrapper">
       </div>
+
+      </div><!-- .footer-content -->
 
     </footer><!-- #colophon -->
 

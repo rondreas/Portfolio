@@ -217,19 +217,17 @@ p {
   font-size: 2vmin;
 }
 
-/* Fix to solve the size for out icons */
-.social-navigation ul,
-.social-navigation li,
+/* Social Nav */
 .social-navigation a {
-  height: 100%;
+  display: inline-block;
+  text-align: center;
+  margin: 0.5em;
 }
 
-social-navigation a {
-  display: block;
-}
-
+/* Fix to solve the size for out icons */
 .icon {
   height: 5vmin;
+  width: 5vmin;
   fill: aliceblue;
 }
 
