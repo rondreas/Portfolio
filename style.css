@@ -53,6 +53,16 @@ body {
   flex-direction: column; 
 }
 
+/* 
+ * Blasted hack required to render a full screen for webkit, chrome and safari... 
+ * https://developers.google.com/web/updates/2016/12/url-bar-resizing
+ */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  html, body {
+    height: calc(100% - 74px); /* 74px is apparently the size of the addressbar... */
+  }
+}
+
 .menu {
   margin: 0px;
   padding: 0px;
@@ -110,6 +120,12 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .site-header {
+    height: calc(14vh - 74px);
   }
 }
 
@@ -218,6 +234,12 @@ p {
   justify-content: center;
 }
 
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .site-footer {
+    height: calc(12vh - 74px);
+  }
+}
+
 .footer-content {
   display: flex;
   justify-content: center;
@@ -267,6 +289,7 @@ p {
   color: floralwhite;
   text-align: center;
 }
+
 
 .under-construction div {
   display: flex;
