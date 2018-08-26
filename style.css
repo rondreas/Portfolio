@@ -120,7 +120,8 @@ p {
 
 @media (orientation: portrait) {
   .site-branding-text {
-    align-items: center;
+    padding-left: 3em;
+    padding-bottom: 1em;
   }
 }
 
@@ -215,6 +216,7 @@ p {
 
 .site-footer p {
   font-size: 2vmin;
+  font-weight: bold;
 }
 
 /* Social Nav */
@@ -229,6 +231,21 @@ p {
   height: 5vmin;
   width: 5vmin;
   fill: aliceblue;
+}
+
+/* Contact */
+.contact-wrapper {
+  margin-left: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Fix to get some space between icon and content */
+.contact-wrapper p span {
+  margin-right: 0.5em;
+  font-size: 2.5vmin;
+  line-height: 3vmin;
 }
 
 /* Under Construction Style */

@@ -20,6 +20,8 @@
       <?php endif; ?>
 
       <div class="contact-wrapper">
+        <p><span class='dashicons dashicons-phone'></span>+46 70 550 53 27</p>
+        <p><span class='dashicons dashicons-email-alt'></span>andreas.ranman@gmail.com</p>
       </div>
 
       </div><!-- .footer-content -->
