@@ -39,6 +39,12 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
 
+  /* Added fix to solve the scrolling in Chrome on mobile */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
   display: flex;
   flex: 1 0 auto;  
   flex-direction: column; 
