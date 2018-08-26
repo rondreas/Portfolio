@@ -42,8 +42,6 @@
         </div>
       <?php endif; ?>
 
-      </div>
-
     </header><!-- site-header -->
 
   <div class="site-content-contain">
