@@ -10,6 +10,12 @@ function portfolio_setup() {
 
 add_action('after_setup_theme', 'portfolio_setup');
 
+function include_dashicons() {
+  wp_enqueue_style( 'dashicons' );
+}
+
+add_action( 'wp_enqueue_scripts', 'include_dashicons' );
+
 require get_parent_theme_file_path('inc/icon-functions.php');
 
 class Custom_Walker extends Walker_Nav_Menu {
