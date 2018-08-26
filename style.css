@@ -191,7 +191,7 @@ p {
   background-size: cover;
 }
 
-#front-menu a, span {
+#front-menu a, #front-menu span {
   display: block;
   height: 100%;
   width: 100%;
