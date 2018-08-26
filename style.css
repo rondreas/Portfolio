@@ -273,3 +273,7 @@ p {
 .under-construction p {
   font-size: 6vmin;
 }
+
+.screen-reader-text {
+  display: none;
+}
