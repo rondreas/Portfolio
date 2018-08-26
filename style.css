@@ -17,6 +17,9 @@ html {
 
   /* font-size: 10vmin; */
   color: DarkSlateGray;
+
+  /* Chrome seem lazy to render so will use this background as fallback */
+  background-color: dodgerblue;
 }
 
 body {
