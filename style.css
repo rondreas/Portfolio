@@ -279,6 +279,11 @@ p {
   line-height: 3vmin;
 }
 
+.site-content {
+  background-color: whitesmoke;
+  height: 74vh;
+}
+
 /* Under Construction Style */
 .under-construction {
   height: 74vh;
@@ -289,7 +294,6 @@ p {
   color: floralwhite;
   text-align: center;
 }
-
 
 .under-construction div {
   display: flex;
