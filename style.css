@@ -279,9 +279,40 @@ p {
   line-height: 3vmin;
 }
 
+/* Styling for actual content */
 .site-content {
   background-color: whitesmoke;
-  height: 74vh;
+  min-height: 74vh;
+}
+
+.site-content article {
+  padding: auto;
+  background-color: #fbfbfb;
+}
+
+@media (orientation: portrait) {
+  .content-area {
+    width: 90%;
+  }
+}
+
+@media (orientation: landscape) {
+  .content-area {
+    width: 50%;
+  }
+}
+
+.site-content h2 {
+  font-size: 18pt;
+}
+
+.site-content h2 a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.site-content p {
+  font-size: 12pt;
 }
 
 /* Under Construction Style */
