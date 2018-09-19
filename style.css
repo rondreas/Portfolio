@@ -53,6 +53,10 @@ body {
   flex-direction: column; 
 }
 
+li {
+  list-style: none;
+}
+
 /* 
  * Blasted hack required to render a full screen for webkit, chrome and safari... 
  * https://developers.google.com/web/updates/2016/12/url-bar-resizing
@@ -357,3 +361,26 @@ p {
 .screen-reader-text {
   display: none;
 }
+
+/* Handle content as I go along */
+
+/* Center graphical items in posts */
+figure {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  align-items: center;
+  justify-content: center;
+
+}
+
+/* Solved videos in pages being too big. */ 
+figure video {
+  max-width: 100%;
+}
+
+/* Set to fixed height in order to difference in size. */
+.blocks-gallery-item img {
+  height: 300px;
+}
+
