@@ -285,30 +285,43 @@ p {
   min-height: 74vh;
 }
 
+.site-main {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+
 .site-content article {
-  padding: auto;
+  margin: 1em;
   background-color: #fbfbfb;
 }
 
 @media (orientation: portrait) {
-  .content-area {
+  .site-content article {
     width: 90%;
   }
 }
 
 @media (orientation: landscape) {
-  .content-area {
+  .site-content article {
     width: 50%;
   }
 }
 
 .site-content h2 {
   font-size: 18pt;
+  padding: 1em;
 }
 
 .site-content h2 a {
   text-decoration: none;
   color: inherit;
+}
+
+.entry-content {
+  padding: 1em;
 }
 
 .site-content p {
