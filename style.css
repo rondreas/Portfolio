@@ -98,9 +98,13 @@ p {
 }
 
 /* Header */
+.site-header {
+  min-height: 14vh;
+  display: flex;
+}
+
 @media (orientation: landscape) {
   .site-header {
-    height: 14vh;
     padding-left: 3em;
     padding-right: 2em;
     display: flex;
@@ -110,8 +114,6 @@ p {
 
 @media (orientation: portrait) {
   .site-header {
-    height: 14vh;
-    display: flex;
     flex-direction: column;
     justify-content: center;
   }
@@ -215,7 +217,7 @@ p {
 
 /* Footer */
 .site-footer {
-  height: 12vh;
+  min-height: 12vh;
   color: skyblue;
   display: flex;
   flex-direction: column;
