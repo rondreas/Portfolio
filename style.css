@@ -107,7 +107,6 @@ p {
   .site-header {
     padding-left: 3em;
     padding-right: 2em;
-    display: flex;
     justify-content: space-between; 
   }
 }
