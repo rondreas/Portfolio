@@ -282,7 +282,8 @@ p {
 
 @media (orientation: portrait) {
   .site-content article {
-    width: 90%;
+    margin: 0px;
+    width: 100%;
   }
 }
 
