@@ -26,25 +26,23 @@ function portfolio_customize( $wp_customize ) {
   ));
 
   $wp_customize->add_setting( 'contact_phone', array(
-    'default'=>__('+46 12 34 56', 'portfolio'),
+    'default'=>__('', 'portfolio'),
     'transport'=>'postMessage',
-    'sanitize_callback'=>'sanitize_textarea'
   ));
 
   $wp_customize->add_setting( 'contact_mail', array(
-    'default'=>__('me@url.com', 'portfolio'),
+    'default'=>__('', 'portfolio'),
     'transport'=>'postMessage',
-    'sanitize_callback'=>'sanitize_textarea'
   ));
 
-  $wp_customize->add_control( 'phone_number', array(
+  $wp_customize->add_control( 'contact_phone', array(
     'label'=>__('Phone Number', 'portfolio'),
     'section'=>'contact',
     'settings'=>'contact_phone',
     'type'=>'text'
   ));
 
-  $wp_customize->add_control( 'mail_address', array(
+  $wp_customize->add_control( 'contact_mail', array(
     'label'=>__('Mail', 'portfolio'),
     'section'=>'contact',
     'settings'=>'contact_mail',

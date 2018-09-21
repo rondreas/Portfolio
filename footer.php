@@ -19,10 +19,20 @@
         </nav><!-- .social-navigation -->
       <?php endif; ?>
 
+      <?php
+      /* Check if contact info is set - if set display. */
+      if ( get_theme_mod( 'contact_phone' ) != '' && get_theme_mod( 'contact_mail' ) != '' ): ?>
+
       <div class="contact-wrapper">
-        <p><span class='dashicons dashicons-phone'></span>+46 70 550 53 27</p>
-        <p><span class='dashicons dashicons-email-alt'></span>andreas.ranman@gmail.com</p>
-      </div>
+        <p class="contact-number">
+          <span class='dashicons dashicons-phone'></span><?php echo get_theme_mod( 'contact_phone' ); ?>
+        </p>
+        <p class="contact-mail">
+          <span class='dashicons dashicons-email-alt'></span><?php echo get_theme_mod( 'contact_mail' ); ?>
+        </p>
+      </div><!-- .contact-wrapper -->
+
+      <?php endif; ?>
 
       </div><!-- .footer-content -->
 

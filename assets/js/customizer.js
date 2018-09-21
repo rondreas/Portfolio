@@ -1,7 +1,15 @@
 ( function( $ ) {
-  wp.customize( '', function( value ) {
+
+  wp.customize( 'contact_phone', function( value ) {
     value.bind( function( to ) {
       $( '.contact-number' ).text( to );
     } );
-  };
+  } );
+
+  wp.customize( 'contact_mail', function( value ) {
+    value.bind( function( to ) {
+      $( '.contact-mail' ).text( to );
+    } );
+  } );
+
 } ) ( jQuery );
