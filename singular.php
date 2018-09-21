@@ -29,12 +29,6 @@
 
       </article>
 
-<?php
-      /* Let's skip comments for the time being... 
-       * people can reach me on twitter ¯\_(ツ)_/¯
-       */
-?>
-
     <?php endwhile; // End of the loop. ?>
 
     </div> <!-- #primary -->
