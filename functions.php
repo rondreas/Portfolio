@@ -16,7 +16,13 @@ function include_dashicons() {
 
 add_action( 'wp_enqueue_scripts', 'include_dashicons' );
 
+function customize_preview_js() {
+  wp_enqueue_script('portfolio_customizer', get_parent_theme_file_path('inc/assets/customizer.js'), array( 'customize-preview' ), '1.0', true );
+}
+add_action( 'customize_preview_init', 'customize_preview_js');
+
 require get_parent_theme_file_path('inc/icon-functions.php');
+require get_parent_theme_file_path('inc/customizer.php');
 
 class Custom_Walker extends Walker_Nav_Menu {
   /**
