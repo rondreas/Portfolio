@@ -364,3 +364,14 @@ figure video {
   height: 300px;
 }
 
+/* Style for gallery pages */
+.page-gallery article {
+  display: inline-block;
+  width: 100%;
+}
+
+.page-gallery img {
+  max-width: 400px;
+  height: 400px;
+  object-fit: cover;
+}
