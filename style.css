@@ -376,12 +376,13 @@ figure video {
 /* Grid gallery mobile first, display three columns. */
 .grid-gallery {
   display: grid;
-  grid-gap: 0px;
+  overflow: hidden; /* To avoid horizontal scrollbar */
+  grid-gap: 0;
   width: 100%;
   grid-template-columns: repeat(3, 1fr);
 }
 
-.grid-gallery img {
+.grid-gallery img, .grid-gallery a {
   width: 33.33vw;
   height: 33.33vw;
   object-fit: cover;
@@ -395,7 +396,7 @@ figure video {
     grid-template-columns: repeat(4, 1fr);
   }
 
-  .grid-gallery img {
+  .grid-gallery img, .grid-gallery a {
     width: 25vw;
     height: 25vw;
     object-fit: cover;
@@ -411,7 +412,7 @@ figure video {
     grid-template-columns: repeat(5, 1fr);
   }
 
-  .grid-gallery img {
+  .grid-gallery img, .grid-gallery a {
     width: 20vw;
     height: 20vw;
     object-fit: cover;
