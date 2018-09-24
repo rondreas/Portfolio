@@ -264,7 +264,7 @@ p {
 
 /* Styling for actual content */
 .site-content {
-  background-color: whitesmoke;
+  background-color: #fbfbfb;
   min-height: 74vh;
 }
 
@@ -277,13 +277,11 @@ p {
 }
 
 .site-content article {
-  margin: 1em;
-  background-color: #fbfbfb;
+  margin: 0px;
 }
 
 @media (orientation: portrait) {
   .site-content article {
-    margin: 0px;
     width: 100%;
   }
 }
@@ -344,6 +342,15 @@ p {
 
 /* Handle content as I go along */
 
+.front-page section {
+  display: flex;
+  width: 100%;
+  flex: 1 0 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 /* Center graphical items in posts */
 figure {
   display: flex;
@@ -363,15 +370,55 @@ figure video {
 .blocks-gallery-item img {
   height: 300px;
 }
+  
+/* Style for custom grid gallery */
 
-/* Style for gallery pages */
-.page-gallery article {
-  display: inline-block;
+/* Grid gallery mobile first, display three columns. */
+.grid-gallery {
+  display: grid;
+  grid-gap: 0px;
   width: 100%;
+  grid-template-columns: repeat(3, 1fr);
 }
 
-.page-gallery img {
-  max-width: 400px;
-  height: 400px;
+.grid-gallery img {
+  width: 33.33vw;
+  height: 33.33vw;
   object-fit: cover;
+}
+
+@media only screen and (min-width: 600px) {
+
+  .grid-gallery {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .grid-gallery img {
+    width: 25vw;
+    height: 25vw;
+    object-fit: cover;
+  }
+
+}
+
+@media only screen and (min-width: 800px) {
+
+  .grid-gallery {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .grid-gallery img {
+    width: 20vw;
+    height: 20vw;
+    object-fit: cover;
+  }
+
+}
+
+.showreel {
+  background-color: DarkSlateGray;
 }
