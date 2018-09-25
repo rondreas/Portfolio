@@ -35,9 +35,26 @@
     if ( $projects ): ?>
 
       <section class="projects">
-        <article>
-        <?php echo $projects[0]->post_content; ?>
-        </article>
+        <div class="entry-content">
+          <div class="projects-gallery">
+            <?php
+            $images = get_posts( array (
+              'post_parent'=>$projects[0]->ID,
+              'post_type'=>'attachment',
+              'post_status'=>'any',
+              'posts_per_page'=> 4,
+            ));
+
+            if ( $images ) {
+              foreach( $images as $post) {
+                setup_postdata( $post );
+                the_attachment_link( $post->ID, true );
+              }
+              wp_reset_postdata();
+            }
+            ?>
+          </div>
+        </div>
       </section><!-- .projects -->
 
     <?php endif; // End of "if projects"?>
@@ -54,7 +71,9 @@
 
       <section class="scripts">
         <article>
-          <?php echo apply_filters('the_content', $scripts[0]->post_content); ?>
+          <div class="entry-content">
+            <?php echo apply_filters('the_content', $scripts[0]->post_content); ?>
+          </div>
         </article>
       </section><!-- .scripts -->
 

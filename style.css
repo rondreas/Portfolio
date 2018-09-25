@@ -5,6 +5,11 @@
  * Version: 1.0
  */
 
+/* 
+ * TODOS
+ * - Make text scale better for mobile
+ */
+
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&subset=latin-ext');
 
 html {
@@ -85,6 +90,7 @@ h1, h2, h3, p {
 }
 
 /* font sizes in photoshop document: 18 - 24 - 36 - 48 */
+/*
 h1 {
   font-size: 3.8vmin;
 }
@@ -96,6 +102,7 @@ h2 {
 p {
   font-size: 1.5vmin;
 }
+*/
 
 /* Header */
 .site-header {
@@ -105,8 +112,6 @@ p {
 
 @media (orientation: landscape) {
   .site-header {
-    padding-left: 3em;
-    padding-right: 2em;
     justify-content: space-between; 
   }
 }
@@ -125,11 +130,20 @@ p {
   flex-direction: column;
   justify-content: center;
   text-transform: uppercase;
+  padding-left: 5%;
 }
 
 .site-branding-text a {
   text-decoration: none;
   color: aliceblue;
+}
+
+.site-title {
+  font-size: 3.8vmin;
+}
+
+.site-tagline {
+  font-size: 2.55vmin;
 }
 
 @media (orientation: portrait) {
@@ -293,8 +307,7 @@ p {
 }
 
 .site-content h2 {
-  font-size: 18pt;
-  padding: 1em;
+  padding: 1em 0px;
 }
 
 .site-content h2 a {
@@ -303,7 +316,7 @@ p {
 }
 
 .entry-content {
-  padding: 1em;
+  padding: 0px 1em 1em;
 }
 
 .site-content p {
@@ -371,6 +384,21 @@ figure video {
   height: 300px;
 }
   
+/* Style for displaying projects */
+
+.projects-gallery {
+  display: grid;
+  grid-gap: 0.5em;
+  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* User should have these images all be same aspect ratio */
+.projects-gallery img, .projects-gallery a{
+  width: 100%;
+  height: auto;
+}
+
 /* Style for custom grid gallery */
 
 /* Grid gallery mobile first, display three columns. */
@@ -391,7 +419,6 @@ figure video {
 @media only screen and (min-width: 600px) {
 
   .grid-gallery {
-    display: grid;
     width: 100%;
     grid-template-columns: repeat(4, 1fr);
   }
@@ -406,8 +433,16 @@ figure video {
 
 @media only screen and (min-width: 800px) {
 
+  .projects-gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .projects-gallery img, .projects-gallery a {
+    width: 25vw;
+    height: auto;
+  }
+
   .grid-gallery {
-    display: grid;
     width: 100%;
     grid-template-columns: repeat(5, 1fr);
   }
@@ -420,6 +455,45 @@ figure video {
 
 }
 
-.showreel {
+.projects {
   background-color: DarkSlateGray;
 }
+
+.showreel {
+  padding: 2em 0px;
+  background-color: DarkSlateGray;
+}
+
+.entry-title {
+  text-align: center;
+  font-size: 2em;
+  padding: 1em;
+
+  color: transparent;
+
+  background: -moz-linear-gradient(
+    bottom right, 
+    darkcyan, 
+    dodgerblue
+  );
+  /* General Syntax */
+  background: linear-gradient(
+    to bottom right, 
+    darkcyan, 
+    dodgerblue
+  );
+
+  /* Set background not to repeat, and to follow viewport */
+  background-repeat: no-repeat;
+
+  /* Added fix to solve the scrolling in Chrome on mobile */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  background-clip: text;
+
+}
+
+
