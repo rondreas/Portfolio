@@ -10,7 +10,7 @@
 
       <header class="entry-header">
         <?php if ( !is_single() or !is_page() ) {
-          the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+          the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
         } ?>
       </header> <!-- .entry-header --> 
 

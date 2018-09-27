@@ -578,6 +578,16 @@ figure video {
 
 }
 
+.projects .entry-title {
+  background: none;
+  color: #fbfbfb;
+}
+
+.entry-title a {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* About */
 
 .about {

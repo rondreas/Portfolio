@@ -36,6 +36,11 @@
 
       <section class="projects">
         <article>
+
+          <header class="entry-header">
+            <h1 class="entry-title"><?php echo $projects[0]->post_title; ?></h1>
+          </header> <!-- .entry-header --> 
+
           <div class="entry-content">
             <div class="projects-gallery">
               <?php
