@@ -273,6 +273,7 @@ h1, h2, h3, p {
 .footer-content {
   display: flex;
   flex-direction: column;
+  padding: 1em 0px;
 }
 
 @media (min-width: 680px) {
