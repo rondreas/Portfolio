@@ -364,7 +364,6 @@ h1, h2, h3, p {
 /* Fix to get some space between icon and content */
 .contact-wrapper p span {
   margin-right: 0.5em;
-  line-height: 3vmin;
 }
 
 /* Styling for actual content */
