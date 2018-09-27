@@ -17,9 +17,6 @@ function portfolio_customize( $wp_customize ) {
    *  https://iamsteve.me/blog/entry/using-wordpress-customiser-to-create-editable-regions
    */
 
-  // TODO : Add Section with controlls for Showreel video
-  // TODO : Add Section with controls for a small gallery showing projects.
-
   $wp_customize->add_section( 'contact', array(
     'title'=>__('Contact', 'portfolio'),
     'priority'=>1
@@ -49,6 +46,41 @@ function portfolio_customize( $wp_customize ) {
     'type'=>'text'
   ));
 
+  /* About */
+  $wp_customize->add_section( 'about', array(
+    'title'=>__('About', 'portfolio'),
+    'priority'=>2
+  ));
+
+  $wp_customize->add_setting( 'about_image', array(
+    'default'=>__( get_template_directory_uri() . '/images/me.jpg', 'portfolio'),
+    'transport'=>'postMessage',
+  ));
+
+  $wp_customize->add_setting( 'about_desc', array(
+    'default'=>__('', 'portfolio'),
+    'transport'=>'postMessage',
+  ));
+
+  $wp_customize->add_control(
+       new WP_Customize_Image_Control(
+           $wp_customize,
+           'about_image',
+           array(
+               'label'      => __( 'Upload a portrait', 'portfolio' ),
+               'section'    => 'about',
+               'settings'   => 'about_image',
+               'context'    => 'about-image'
+           )
+       )
+   );
+
+  $wp_customize->add_control( 'about_desc', array(
+    'label'=>__('Desciption', 'portfolio'),
+    'section'=>'about',
+    'settings'=>'about_desc',
+    'type'=>'text'
+  ));
 }
 
 add_action( 'customize_register', 'portfolio_customize' );

@@ -1,6 +1,9 @@
 <?php
 
 function portfolio_setup() {
+
+  add_theme_support( 'post-thumbnails' );
+
   register_nav_menus( array(
     'top' => __('Top Menu', 'portfolio'),
     'front' => __('Front Page Menu', 'portfolio'),

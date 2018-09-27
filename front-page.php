@@ -35,26 +35,28 @@
     if ( $projects ): ?>
 
       <section class="projects">
-        <div class="entry-content">
-          <div class="projects-gallery">
-            <?php
-            $images = get_posts( array (
-              'post_parent'=>$projects[0]->ID,
-              'post_type'=>'attachment',
-              'post_status'=>'any',
-              'posts_per_page'=> 4,
-            ));
+        <article>
+          <div class="entry-content">
+            <div class="projects-gallery">
+              <?php
+              $images = get_posts( array (
+                'post_parent'=>$projects[0]->ID,
+                'post_type'=>'attachment',
+                'post_status'=>'any',
+                'posts_per_page'=> 4,
+              ));
 
-            if ( $images ) {
-              foreach( $images as $post) {
-                setup_postdata( $post );
-                the_attachment_link( $post->ID, true );
+              if ( $images ) {
+                foreach( $images as $post) {
+                  setup_postdata( $post );
+                  the_attachment_link( $post->ID, true );
+                }
+                wp_reset_postdata();
               }
-              wp_reset_postdata();
-            }
-            ?>
+              ?>
+            </div>
           </div>
-        </div>
+        </article>
       </section><!-- .projects -->
 
     <?php endif; // End of "if projects"?>
@@ -71,6 +73,10 @@
 
       <section class="scripts">
         <article>
+          <header class="entry-header">
+          <h1 class="entry-title"><?php echo $scripts[0]->post_title; ?></h1>
+          </header> <!-- .entry-header --> 
+
           <div class="entry-content">
             <?php echo apply_filters('the_content', $scripts[0]->post_content); ?>
           </div>
@@ -126,11 +132,13 @@
 
     if ( $about ): ?>
 
+      <?php setup_postdata( $about[0] ); ?>
+
       <section class="about">
-        <article>
-          <?php echo apply_filters('the_content', $about[0]->post_content); ?>
-        </article>
+        <?php get_template_part( 'template-parts/about' ); ?>
       </section><!-- .about -->
+            
+      <?php wp_reset_postdata(); ?>
 
     <?php endif; // End of "if about"?>
 

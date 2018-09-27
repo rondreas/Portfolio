@@ -12,4 +12,18 @@
     } );
   } );
 
+  wp.customize( 'about_image', function( value ) {
+    value.bind( function( to ) {
+      if( to == '' )
+      {
+        $( '.about img' ).hide();
+      }
+      else
+      {
+        $( '.about img' ).show();
+        $( '.about img' ).attr( 'src', to );
+      }
+    } );
+  });
+
 } ) ( jQuery );

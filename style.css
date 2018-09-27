@@ -524,11 +524,6 @@ figure video {
     grid-template-columns: repeat(4, 1fr);
   }
 
-  .projects-gallery img, .projects-gallery a {
-    width: 25vw;
-    height: auto;
-  }
-
   .grid-gallery {
     width: 100%;
     grid-template-columns: repeat(5, 1fr);
@@ -583,4 +578,34 @@ figure video {
 
 }
 
+/* About */
 
+.about {
+  padding: 2em 0px;
+}
+
+.about .entry-content {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  background: none;
+  width: 70%;
+  display: grid;
+  grid-gap: 2em;
+  grid-template-columns: 1fr 2fr;
+}
+
+.card div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-image {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+}
