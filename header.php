@@ -18,9 +18,9 @@
     <header class="site-header">
 
       <div class="site-branding-text">
-        <h1 class="site-title">
+        <h2 class="site-title">
           <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-        </h1>
+        </h2>
 
         <?php
         $description = get_bloginfo( 'description', 'display' );
@@ -28,7 +28,7 @@
         if ( $description || is_customize_preview() ) :
         ?>
 
-        <h2 class="site-tagline"><?php echo $description; ?></h2>
+        <h3 class="site-tagline"><?php echo $description; ?></h3>
 
         <?php endif; ?>
 

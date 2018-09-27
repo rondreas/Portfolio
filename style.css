@@ -468,8 +468,17 @@ figure video {
 }
 
 .showreel {
-  padding: 2em 0px; /* No horizontal padding due getting horizontal scroll. */
   background-color: DarkSlateGray;
+}
+
+/* To center the embedded video after I shrunk it. */
+.showreel article {
+  display: flex;
+  justify-content: center;
+}
+
+.showreel article div {
+  width: 90%;
 }
 
 .entry-title {
