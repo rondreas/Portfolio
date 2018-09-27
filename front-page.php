@@ -116,7 +116,12 @@
                * using wp_get_attachment_image_src 
                **/
               setup_postdata( $post );
-              the_attachment_link( $post->ID, true );
+              $type = get_post_mime_type($post->ID);
+              if ( $type == 'video/mp4') {
+                echo "<video class='gallery-video' autoplay='1' loop='1'><source src='" . wp_get_attachment_url($post->ID) . "' type='" . $type . "'></video>";
+              } else {
+                the_attachment_link( $post->ID, true );
+              }
             }
             wp_reset_postdata();
           }

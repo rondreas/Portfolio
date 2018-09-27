@@ -424,7 +424,7 @@ figure video {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.grid-gallery img, .grid-gallery a {
+.grid-gallery img, .grid-gallery a, .grid-gallery .gallery-video {
   width: 33.33vw;
   height: 33.33vw;
   object-fit: cover;
@@ -437,7 +437,7 @@ figure video {
     grid-template-columns: repeat(4, 1fr);
   }
 
-  .grid-gallery img, .grid-gallery a {
+  .grid-gallery img, .grid-gallery a, .grid-gallery .gallery-video {
     width: 25vw;
     height: 25vw;
     object-fit: cover;
@@ -456,7 +456,7 @@ figure video {
     grid-template-columns: repeat(5, 1fr);
   }
 
-  .grid-gallery img, .grid-gallery a {
+  .grid-gallery img, .grid-gallery a, .grid-gallery .gallery-video {
     width: 20vw;
     height: 20vw;
     object-fit: cover;

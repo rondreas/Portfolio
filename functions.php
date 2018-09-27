@@ -26,4 +26,16 @@ add_action( 'customize_preview_init', 'customize_preview_js');
 require get_parent_theme_file_path('inc/icon-functions.php');
 require get_parent_theme_file_path('inc/customizer.php');
 
+add_filter( 'the_content', 'remove_autop', 0 );
+function remove_autop( $content )
+{
+  global $post;
+
+  if ( $post->post_name == 'gallery' )
+    remove_filter('the_content', 'wpautop');
+
+  return $content;
+}
+
+
 ?>
