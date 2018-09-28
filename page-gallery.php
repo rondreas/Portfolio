@@ -26,7 +26,13 @@
             setup_postdata( $post );
             $type = get_post_mime_type($post->ID);
             if ( $type == 'video/mp4') {
-              echo "<video class='gallery-video' autoplay='1' loop='1'><source src='" . wp_get_attachment_url($post->ID) . "' type='" . $type . "'></video>";
+            ?>
+              <div class="gallery-video">
+                <video autoplay="autoplay" loop="loop">
+                  <source src="<?php echo wp_get_attachment_url($post->ID); ?>">
+                </video>
+              </div>
+            <?php 
             } else {
               the_attachment_link( $post->ID, true );
             }
