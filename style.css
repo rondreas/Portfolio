@@ -432,7 +432,7 @@ figure video {
 
 /* Fix to crop the image in chrome, and remove scrollbars */
 .grid-gallery .wp-video .wp-video-shortcode {
-  min-width: 0px;
+  min-width: 0px !important;
   overflow-x: hidden;
   overflow: -moz-scrollbars-none;
   -ms-overflow-style: none;
