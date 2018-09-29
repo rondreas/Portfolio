@@ -43,22 +43,7 @@
 
           <div class="entry-content">
             <div class="projects-gallery">
-              <?php
-              $images = get_posts( array (
-                'post_parent'=>$projects[0]->ID,
-                'post_type'=>'attachment',
-                'post_status'=>'any',
-                'posts_per_page'=> 4,
-              ));
-
-              if ( $images ) {
-                foreach( $images as $post) {
-                  setup_postdata( $post );
-                  the_attachment_link( $post->ID, true );
-                }
-                wp_reset_postdata();
-              }
-              ?>
+              <?php echo apply_filters( 'the_content', $projects[0]->post_content ); ?>
             </div>
           </div>
         </article>
