@@ -19,6 +19,15 @@ function portfolio_setup() {
 
 add_action('after_setup_theme', 'portfolio_setup');
 
+add_filter( 'image_size_names_choose', 'grid_gallery_image_sizes' );
+function grid_gallery_image_sizes( $sizes ) {
+  return array_merge( $sizes, array(
+    'gg-s'  => __( 'Grid Gallery Small' ),
+    'gg-m'  => __( 'Grid Gallery Medium' ),
+    'gg-l'  => __( 'Grid Gallery Large' ),
+  ) );
+}
+
 function include_dashicons() {
   wp_enqueue_style( 'dashicons' );
 }
