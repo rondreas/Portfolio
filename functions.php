@@ -33,18 +33,16 @@ add_action( 'customize_preview_init', 'customize_preview_js');
 require get_parent_theme_file_path('inc/icon-functions.php');
 require get_parent_theme_file_path('inc/customizer.php');
 
-add_filter( 'the_content', 'remove_autop', 0 );
+/* Stop Wordpress from automatically wrapping posts content with <p> tags */
 function remove_autop( $content )
 {
   global $post;
-
-  if ( $post->post_name == 'gallery' )
-    remove_filter('the_content', 'wpautop');
-
+  remove_filter('the_content', 'wpautop');
   return $content;
 }
+add_filter( 'the_content', 'remove_autop', 0 );
 
-/* https://wordpress.stackexchange.com/a/284892 */
+/* https://wordpress.stackexchange.com/a/295574 */
 add_filter( 'wp_video_shortcode', function( $output ) {
     if ( false !== strpos( $output, 'autoplay="1"' ) ) {
         $output = str_replace( '<video', '<video muted', $output );
