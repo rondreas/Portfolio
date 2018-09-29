@@ -8,6 +8,13 @@ function portfolio_setup() {
     'top' => __('Top Menu', 'portfolio'),
     'social' => __('Social Links Menu', 'portfolio'),
   ));
+
+  /* Define custom image sizes */
+
+  /* Square images for the grid gallery */
+  add_image_size( 'gg-s', 200, 200, true );
+  add_image_size( 'gg-m', 400, 400, true );
+  add_image_size( 'gg-l', 800, 800, true );
 }
 
 add_action('after_setup_theme', 'portfolio_setup');
