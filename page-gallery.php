@@ -9,37 +9,7 @@
     while ( have_posts() ) : the_post(); ?>
 
       <div class="grid-gallery">
-        <?php 
-        $images = get_posts( array (
-          'post_parent'=>$post->ID,
-          'post_type'=>'attachment',
-          'post_status'=>'any',
-          'posts_per_page'=> -1,
-          'orderby'=>'rand',
-        ));
-
-        if ( $images ) {
-          foreach( $images as $post) {
-            /* To improve I could get a smaller size for anything but gifs 
-             * using wp_get_attachment_image_src 
-             **/
-            setup_postdata( $post );
-            $type = get_post_mime_type($post->ID);
-            if ( $type == 'video/mp4') {
-            ?>
-              <div class="gallery-video">
-                <video autoplay="autoplay" loop="loop">
-                  <source src="<?php echo wp_get_attachment_url($post->ID); ?>">
-                </video>
-              </div>
-            <?php 
-            } else {
-              the_attachment_link( $post->ID, true );
-            }
-          }
-          wp_reset_postdata();
-        }
-        ?>
+        <?php the_content(); ?>
       </div>
 
     <?php endwhile; // End of the loop. ?>

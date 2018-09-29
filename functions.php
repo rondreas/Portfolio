@@ -37,5 +37,12 @@ function remove_autop( $content )
   return $content;
 }
 
+/* https://wordpress.stackexchange.com/a/284892 */
+add_filter( 'wp_video_shortcode', function( $output ) {
+    if ( false !== strpos( $output, 'autoplay="1"' ) ) {
+        $output = str_replace( '<video', '<video muted', $output );
+    }
+    return $output;
+} );
 
 ?>

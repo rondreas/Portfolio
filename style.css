@@ -424,16 +424,20 @@ figure video {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.grid-gallery img, .grid-gallery a, .grid-gallery .gallery-video {
-  width: 33.33vw;
-  height: 33.33vw;
+.grid-gallery video {
   object-fit: cover;
 }
 
-.gallery-video video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.grid-gallery img, .grid-gallery a, .grid-gallery .wp-video {
+  width: 33.33vw !important;
+  height: 33.33vw !important;
+  object-fit: cover !important;
+}
+
+.wp-video .mejs-video {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
 }
 
 @media only screen and (min-width: 600px) {
@@ -443,10 +447,10 @@ figure video {
     grid-template-columns: repeat(4, 1fr);
   }
 
-  .grid-gallery img, .grid-gallery a, .grid-gallery .gallery-video {
-    width: 25vw;
-    height: 25vw;
-    object-fit: cover;
+  .grid-gallery img, .grid-gallery a, .grid-gallery .wp-video {
+    width: 25vw !important;
+    height: 25vw !important;
+    object-fit: cover !important;
   }
 
 }
@@ -462,10 +466,10 @@ figure video {
     grid-template-columns: repeat(5, 1fr);
   }
 
-  .grid-gallery img, .grid-gallery a, .grid-gallery .gallery-video {
-    width: 20vw;
-    height: 20vw;
-    object-fit: cover;
+  .grid-gallery img, .grid-gallery a, .grid-gallery .wp-video {
+    width: 20vw !important;
+    height: 20vw !important;
+    object-fit: cover !important;
   }
 
 }
