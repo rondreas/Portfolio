@@ -43,13 +43,7 @@ require get_parent_theme_file_path('inc/icon-functions.php');
 require get_parent_theme_file_path('inc/customizer.php');
 
 /* Stop Wordpress from automatically wrapping posts content with <p> tags */
-function remove_autop( $content )
-{
-  global $post;
-  remove_filter('the_content', 'wpautop');
-  return $content;
-}
-add_filter( 'the_content', 'remove_autop', 0 );
+remove_filter('the_content', 'wpautop');
 
 /* https://wordpress.stackexchange.com/a/295574 */
 add_filter( 'wp_video_shortcode', function( $output ) {
