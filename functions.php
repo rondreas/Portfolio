@@ -15,6 +15,9 @@ function portfolio_setup() {
   add_image_size( 'gg-s', 200, 200, true );
   add_image_size( 'gg-m', 400, 400, true );
   add_image_size( 'gg-l', 800, 800, true );
+
+  // Filters the oEmbed process to run the responsive_embed() function
+  add_filter('embed_oembed_html', 'responsive_embed', 10, 3);
 }
 
 add_action('after_setup_theme', 'portfolio_setup');
@@ -52,5 +55,10 @@ add_filter( 'wp_video_shortcode', function( $output ) {
     }
     return $output;
 } );
+
+/* https://gist.github.com/jlengstorf/ce2470df87fd9a892f68 */
+function responsive_embed($html, $url, $attr) {
+    return $html!=='' ? '<div class="embed-container">'.$html.'</div>' : '';
+}
 
 ?>
